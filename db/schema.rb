@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_01_09_140521) do
+ActiveRecord::Schema.define(version: 2023_01_04_124454) do
 
   create_table "tasks", force: :cascade do |t|
-    t.string "title"
-    t.integer "period"
-    t.integer "status"
-    t.time "deadline"
+    t.string "name"
+    t.integer "period", default: 0
+    t.integer "status", default: 0
+    t.date "deadline"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
