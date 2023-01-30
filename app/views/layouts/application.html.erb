@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>DoIt</title>
+    <title>Do_It</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container-sm">
+      <div class="jumbotron">
+        <h1>Zrób to!</h1>
+      </div>
+    </div>
+    <div class="container">
+      <%= yield %>
+    </div>  
   </body>
 </html>
