@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-10">
+      <%= render 'shared/errors', obj: @task %>
+      <%= form_with(model: @task, class: "shadow p-3 mb-3 bg-info rounded", local: true) do |f| %>
+      <div class="form-group row">
+        <%= f.label :name, class: "col-2 col-form-label text-light" %>
+        <div class="col-10">
+          <%= f.text_field :name, class: "form-control shadow rounded", placeholder: "Zadanie" %>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <%= f.label :deadline, class: "col-2 col-form-label text-light" %>
+        <div class="col-10">
+          <%= f.date_field :deadline, class: "form-control shadow rounded", placeholder: "rrrr-mm-dd" %>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <%= f.radio_button :period, :daily, class: "form-check-input"%>
+        <%= f.label :daily, "Zadanie dzienne", class: "form-check-label"%>
+        <%= f.radio_button :period, :weekly, class: "form-check-input"%>
+        <%= f.label :weekly , "Cel na ten tydzień", class: "form-check-label"%>
+        <%= f.radio_button :period, :yearly, class: "form-check-input"%>
+        <%= f.label :yearly, "Cel na ten rok", class: "form-check-label"%>
+      </div>
+      <div class="form-group row justify-content-center">
+        <%= f.submit %>
+      </div>
+      <% end %>
+    </div>
+    <div class="mb-3">
+    <%= link_to '[ Wróć do listy zadań ]', tasks_path, class: "text-info" %>
+    </div>
+  </div>
+</div>

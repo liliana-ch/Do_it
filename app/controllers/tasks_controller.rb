@@ -4,16 +4,16 @@ class TasksController < ApplicationController
     @tasks = Task.all
   end
 
-  # def show
-  #   @task = Task.find(params[:id])
-  # end
+  def show
+    @task = Task.find(params[:id])
+  end
 
   def new
     @task = Task.new
   end
 
   def create
-    @task = Task.new(params.require(:task).permit(:name))
+    @task = Task.new(task_params)
     @task.save
     if @task.save
       flash[:notice] = "Article was created successfully."
@@ -36,6 +36,7 @@ class TasksController < ApplicationController
       render 'edit'
     end
   end
+
   def destroy
     @task = Task.find(params[:id])
     @task.destroy
@@ -45,4 +46,9 @@ class TasksController < ApplicationController
     @tasks = Task.all
   end
 
+private
+
+  def task_params
+    params.require(:task).permit(:name, :period, :status, :deadline)
+  end
 end
