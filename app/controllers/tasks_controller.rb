@@ -29,7 +29,7 @@ class TasksController < ApplicationController
 
   def update
     @task = Task.find(params[:id])
-    if @task.update(params.require(:task).permit(:name))
+    if @task.update(task_params)
       flash[:notice] = "Article was updated successfully."
       redirect_to @task
     else

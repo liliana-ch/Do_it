@@ -25,6 +25,14 @@
         <%= f.radio_button :period, :yearly, class: "form-check-input"%>
         <%= f.label :yearly, "Cel na ten rok", class: "form-check-label"%>
       </div>
+      <% if action_name == 'edit' %>
+        <div class="form-group row">
+          <%= f.radio_button :status, :to_do, class: "form-check-input"%>
+          <%= f.label :to_do, "Do zrobienia", class: "form-check-label"%>
+          <%= f.radio_button :status, :done, class: "form-check-input"%>
+          <%= f.label :dobe , "Wykonane", class: "form-check-label"%>
+        </div>
+      <% end %>
       <div class="form-group row justify-content-center">
         <%= f.submit %>
       </div>
