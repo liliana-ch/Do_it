@@ -3,10 +3,10 @@
 <table>
   <thead>
     <tr>
-      <th>Zadanie</th>
-      <th>Status</th>
-      <th>Rodzaj</th>
-      <th>Termin</th>
+      <th><%= t('task').capitalize %></th>
+      <th><%= t('deadline').capitalize %></th>
+      <th><%= t('period').capitalize  %></th>
+      <th><%= t('status').capitalize %></th>
     </tr>
   </thead>
 
@@ -14,9 +14,9 @@
     <% @tasks.each do |task| %>
       <tr>
         <td><%= task.name %></td>
-        <td><%= task.status %></td>
-        <td><%= task.period %></td>
         <td><%= task.deadline %></td>
+        <td><%= task.period %></td>
+        <td><%= task.status %></td>
         <%#<td><%= link_to 'Show', article_path(article) %></td>
         <%#<td><%= link_to 'Edit', edit_article_path(article) %></td>
         <%#<td><%= link_to 'Delete', article_path(article), method: :delete %></td>
@@ -24,4 +24,4 @@
     <% end %>
   </tbody>
 </table>
-<%# <p><%= link_to 'Create new article', new_article_path %></p> 
+<%# <p><%= link_to 'Create new article', new_article_path %></p>

@@ -1,0 +1,20 @@
+pl:
+  apptitle: "Zrób to!"
+  task: "zadanie"
+  dailytask: "zadanie na dzień"
+  weeklytask: "cel na tydzień"
+  yearlytask: "cel roczny"
+  todo: "co zrobienia"
+  done: "wykonane"
+  taskindex: "Przejdź do listy zadań"
+  succescreate: "Zadanie zostało stworzone"
+  deadline: "termin"
+  status: "status"
+  period: "rodzaj"
+  cannotsave: "Następujące błędy uniemożliwiły zapisanie zadania:"
+  activerecord:
+      task:
+        name: "nazwa"
+        deadline: "termin"
+        status: "status"
+        period: "rodzaj"

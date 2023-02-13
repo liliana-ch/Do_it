@@ -16,7 +16,7 @@ class TasksController < ApplicationController
     @task = Task.new(task_params)
     @task.save
     if @task.save
-      flash[:notice] = "Article was created successfully."
+      flash[:notice] = t('succescreate')
       redirect_to @task
     else
       render 'new'

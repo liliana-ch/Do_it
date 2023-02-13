@@ -31,3 +31,16 @@
 
 en:
   hello: "Hello world"
+  apptitle: "DO IT!"
+  task: "task"
+  dailytask: "daily task"
+  weeklytask: "weekly task"
+  yearlytask: "annual goal"
+  todo: "to do"
+  done: "done"
+  taskindex: "Go to the task list"
+  succescreate: "Task was created successfully"
+  deadline: "deadline"
+  status: "status"
+  period: "period"
+  cannotsave: "These errors prohibited this task from being saved::"
